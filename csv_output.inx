@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+	<_name>CSV Output</_name>
+	<id>org.bekolay.output.csv</id>
+	<dependency type="extension">org.inkscape.output.svg.inkscape</dependency>
+	<dependency type="executable" location="extensions">csv_output.py</dependency>
+	<dependency type="executable" location="extensions">inkex.py</dependency>
+	<param name="mirror" type="boolean" _gui-text="Mirror Y-axis">TRUE</param>
+	<param name="xOrigin" type="float" min="-100000" max="100000" _gui-text="X-origin (px)">0.0</param>
+	<param name="yOrigin" type="float" min="-100000" max="100000" _gui-text="Y-origin (px)">0.0</param>
+	<output>
+		<extension>.csv</extension>
+		<mimetype>text/csv</mimetype>
+		<_filetypename>Comma-Separated Value file (*.csv)</_filetypename>
+		<_filetypetooltip>Export to a Comma-Separated Value file</_filetypetooltip>
+		<dataloss>true</dataloss>
+	</output>
+	<script>
+		<command reldir="extensions" interpreter="python">csv_output.py</command>
+		<helper_extension>org.inkscape.output.svg.inkscape</helper_extension>
+	</script>
+</inkscape-extension>

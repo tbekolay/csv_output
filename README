@@ -1,0 +1,37 @@
+-------------------------- README --------------------------
+
+This is an extension for Inkscape that adds an option for
+writing to Comma-Separated-Value (CSV) files. These CSV
+files do not represent the entire image, they only note
+the x- and y-coordinates of each node in the SVG file.
+It's mainly useful for taking plots that have been
+vectorized and embedded in a and translating the vectorized
+image to x,y values that can then be re-plotted
+using a plotting library like Matplotlib or Matlab.
+
+Portions of this extension were inspired by Bryan Hoyt's
+PixelSnap and Aaron Spike's hpgl_output.py.
+
+----------------------- INSTALLATION -----------------------
+
+To install the extension, csv_output.py and csv_output.inx
+have to reside in Inkscape's extensions folder. You can copy
+them into a local extension folder.
+  Linux: ~/.config/inkscape/extensions/
+  Windows: C:\Documents and Settings\<UserName>\Application Data\Inkscape\extensions\
+
+If you do this, you may have to uncomment some lines in
+csv_output.py to ensure that the file can find inkex.py.
+
+Another (easier) way to do this in Linux while still keeping
+the extension easy to update is to create symbolic links.
+  cd <folder containing csv_output.py and csv_output.inx>
+  sudo ln -s ./csv_output.py /usr/share/inkscape/extensions/csv_output.py
+  sudo ln -s ./csv_output.inx /usr/share/inkscape/extensions/csv_output.inx
+
+-------------------------- USAGE ---------------------------
+
+Once installed, you can save CSV files through the Save As...
+dialog box. Make sure the original SVG file is saved, however,
+as there is no way to load the CSV file once saved.
+
